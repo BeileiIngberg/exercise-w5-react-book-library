@@ -1,5 +1,7 @@
 import "./App.css";
 import data from "./data.json";
+import Header from "./Header"
+import Book from "./Book"
 
 function App() {
   const { books } = data;
@@ -7,6 +9,10 @@ function App() {
 
   return (
     <>
+    <div>
+            <Header />
+            {}
+        </div>
       <div>Book library goes here</div>
     </>
   );
