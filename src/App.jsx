@@ -1,19 +1,21 @@
 import "./App.css";
 import data from "./data.json";
 import Header from "./Header"
-import Book from "./Book"
+import { Book } from "./Book"
 
 function App() {
-  const { books } = data;
-  console.log(books);
+  const books = data.books;
 
   return (
     <>
-    <div>
-            <Header />
-            {}
-        </div>
-      <div>Book library goes here</div>
+      <div>
+        <Header />
+      </div>
+      <div>
+        {books.map((book, index) => (
+          <Book key={index} book={book} />
+        ))}
+      </div>
     </>
   );
 }
